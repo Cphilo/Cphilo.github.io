@@ -1,1 +1,15 @@
-<h1>Cphilo's Profile</h1>It works.
+---
+layout: default
+title: Cphilo's stuff about anything!
+---
+
+<h2>{{ page.title }}</h2>
+<p>Newest</p>
+
+<ul>
+  {% for post in site.posts %}
+    <li>{{ post.date | date_to_string }}
+        <a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
